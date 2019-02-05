@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/" method="post">
+      {{signupform.as_p}}
+      {%csrf_token%}
+      <input type="submit" name="signup" value="Signup">
+    </form>
+    {%if exists%}
+    <p>Email Id already exists</p>
+    {%endif%}
+
+
+  </body>
+</html>

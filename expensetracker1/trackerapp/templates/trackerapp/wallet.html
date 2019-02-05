@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <h1>Wallets</h1>
+  {%if not exists%}
+  <p> Wallet Empty </p>
+  {%else%}
+
+    <table>
+      {% for wallet in wallets%}
+      <thead>
+        <th>Wallet name</th>
+        <th>Amount</th>
+      </thead>
+      <tr>
+        <td>wallet.wname</td>
+        <td>wallet.wamount</td>
+      </tr>
+      {%endfor%}
+    {%endif%}
+
+
+    </table>
+  </body>
+</html>

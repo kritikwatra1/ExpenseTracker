@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/wallet/" method="post" >
+      {{loginform.as_p}}
+      {% csrf_token %}
+      <input type="submit" name="" value="Login">
+      </form>
+      <form action="/signup/">
+        <input type="submit" name="signup" value="Signup">
+
+      </form>
+    {%if not login %}
+    <p>User Name or password is incorrect</p>
+
+    {%endif%}
+
+
+
+  </body>
+</html>
